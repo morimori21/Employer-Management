@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+    <form method="POST" action="{{ url_for('save_changes', empid=employee[0]) }}">
+        <input type="hidden" name="id" value="{{ employee[0] }}">
+        <label for="new_firstname">First Name:</label>
+        <input type="text" name="new_firstname" value="{{ employee[1] }}" required>
+        <input type="text" name="new_lastname" value="{{ employee[2] }}" required>
+        <input type="text" name="new_email" value="{{ employee[3] }}" required>
+        <input type="date" name="new_birthday" value="{{ employee[4] }}" required>
+        <input type="text" name="new_gender" value="{{ employee[5] }}" required>
+        <input type="number" name="new_contact" value="{{ employee[6] }}" required>
+        <input type="text" name="new_address" value="{{ employee[7] }}" required>
+        <input type="text" name="new_dept" value="{{ employee[8] }}" required>
+        <input type="text" name="new_degree" value="{{ employee[9] }}" required>
+        <input type="text" name="new_position" value="{{ employee[10] }}" required>
+        <!-- Include other form fields for editing employee details -->
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

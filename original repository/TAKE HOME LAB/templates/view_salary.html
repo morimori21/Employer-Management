@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Your head content -->
+</head>
+
+<body>
+  <a href="/home">Home</a>
+    <h1>View Salaries</h1>
+    <p>Your adding salary to Employee ID: {{ employee_id }}</p>
+
+    <!-- Display existing salaries -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Salary ID</th>
+                  <th>Employee_Id</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>SSS</th>
+              <th>Philhealth</th>
+              <th>Total Payout</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for salary in salaries %}
+                <tr>
+                    <td>{{ salary[0] }}</td>
+                    <td>{{ salary[1] }}</td>
+                    <td>{{ salary[2] }}</td>
+                    <td>{{ salary[3] }}</td>
+                    <td>{{ salary[4] }}</td>
+                    <td>{{ salary[5] }}</td>
+                    <td>{{ salary[6] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <!-- Add a form to allow the user to add a new salary -->
+    <h2>Add Salary</h2>
+    <form method="post" action="{{ url_for('add_salary', employee_id=employee_id) }}" onsubmit="console.log('Form submitted');">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required>
+
+        <label for="payment_date">Payment Date:</label>
+        <input type="date" id="payment_date" name="payment_date" required>
+
+        <button type="submit">Save Salary</button>
+    </form>
+</body>
+
+</html>
