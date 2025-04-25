@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2025 at 03:18 PM
+-- Generation Time: Apr 25, 2025 at 11:59 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -102,10 +102,8 @@ CREATE TABLE `salary` (
 --
 
 INSERT INTO `salary` (`salary_id`, `employee_id`, `amount`, `payment_date`, `sss_deduction`, `philhealth_deduction`, `net_amount`) VALUES
-(1, 2, 100.00, '2025-04-01', 5.00, 5.00, 90.00),
-(2, 2, 111.00, '2025-04-02', 5.55, 5.55, 99.90),
-(3, 5, 1.00, '2025-04-03', 0.05, 0.05, 0.90),
-(4, 6, 1000000.00, '2041-12-12', 50000.00, 50000.00, 900000.00);
+(5, 2, 1000000.00, '2025-04-03', 50000.00, 50000.00, 900000.00),
+(6, 5, 1000000.00, '2025-04-11', 50000.00, 50000.00, 900000.00);
 
 -- --------------------------------------------------------
 
@@ -179,7 +177,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `salary`
 --
 ALTER TABLE `salary`
-  MODIFY `salary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `salary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_details`
